@@ -1,7 +1,6 @@
 tensorflow==2.4.1
 numpy==1.19.5
-scipy==1.6.1
+scipy==1.4.1
 tensorflow-hub==0.11.0
 kafka-python==2.0.1
 boto3==1.15.8
-tensorflow-hub==0.11.0

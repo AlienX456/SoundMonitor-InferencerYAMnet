@@ -1,9 +1,4 @@
-FROM ubuntu:bionic
-
-RUN apt update &&\
-    apt -y install libsndfile1 &&\
-    apt install -y software-properties-common &&\
-    apt install -y python3-pip &&\
+FROM python:3.8.8-slim-buster
 
 COPY requirements.txt /inferenciator/
 

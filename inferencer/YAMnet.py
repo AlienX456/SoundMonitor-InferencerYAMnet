@@ -1,4 +1,3 @@
-import scipy
 import scipy.signal as ss
 from inferencer.Inferencer import Inferencer
 import tensorflow as tf
@@ -6,7 +5,6 @@ import tensorflow_hub as hub
 import numpy as np
 import csv
 from scipy.io import wavfile
-import os
 
 
 class YAMnet(Inferencer):

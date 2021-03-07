@@ -45,7 +45,9 @@ workflows:
       - sonar
       - test
       - aws-ecr/build-and-push-image:
-          context: AWSContext
+          context:
+            - AWSContext
+            - IACTerraformInferencer
           filters:
             branches:
               only:

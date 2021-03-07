@@ -1,5 +1,5 @@
 from kafka import KafkaConsumer, KafkaProducer
-from json import dumps, loads
+from json import dumps
 import io
 import logging
 import os
@@ -36,7 +36,7 @@ try:
             finishTime = datetime.now()
             duration = finishTime - startTime
             logging.info("Processing Finished for {}  with inference time of {}".format(fileName, duration.total_seconds()))
-            dataToSend = {'device_info': storageData.storage_metadata, 'inference_result': loads(result.to_json()),
+            dataToSend = {'device_info': storageData.storage_metadata, 'inference_result': result,
                           "inferencer_name": 'YAMNET'}
             logging.info("Sending result :{} to topic inference-event".format(dataToSend))
             producer.send(os.environ['INFERENCE_EVENT'], value=dataToSend)

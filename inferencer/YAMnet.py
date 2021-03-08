@@ -35,7 +35,7 @@ class YAMnet(Inferencer):
         result = {"audio_filename": filename}
 
         for i in range(0, len(top_n_classes)):
-            result[top_n_classes[i]] = top_n_scores[i]
+            result[top_n_classes[i]] = top_n_scores[i].item()
 
         return result
 

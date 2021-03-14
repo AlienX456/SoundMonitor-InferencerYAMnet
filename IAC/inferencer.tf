@@ -20,6 +20,7 @@ module "inferencer" {
   kafka_inference_event= var.kafka_inference_event
   kafka_encode_format= var.kafka_encode_format
   kafka_server= var.kafka_server
+  mapper_url=""
 
   ecr_image_tag= var.ecr_image_tag
   ecr_image_repo= var.ecr_image_repo
